@@ -1,0 +1,7 @@
+# Python зависимости
+requests>=2.25.0
+aiohttp>=3.8.0
+
+# Системные зависимости
+# Скрипт использует системную утилиту rsvg-convert (librsvg2-bin)
+# Для установки: apt-get install librsvg2-bin

@@ -1,0 +1,41 @@
+# Конфигурация (содержит секретные данные)
+config.py
+
+# Виртуальное окружение
+venv/
+env/
+ENV/
+
+# Python кэш
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Временные файлы
+*.tmp
+*.log
+*.swp
+*~
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Сгенерированные файлы (если останутся)
+*.png
+storj_card_generated.*
+# Игнорируем SVG только в корне и temp, но не шаблоны
+/*.svg
+/tmp/*.svg
+
+# Данные нод (может содержать приватную информацию)
+nodes.txt
+

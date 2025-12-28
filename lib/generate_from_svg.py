@@ -72,9 +72,12 @@ def generate_svg_from_data(data, template_file, output_svg_file, stats=None):
     if nodes_total is None:
         nodes_total = 0
 
-    # Количество нод всегда красным цветом
+    # Красный цвет только если не все ноды ответили
+    nodes_fill = "#ff0000" if (nodes_total > 0 and nodes_success < nodes_total) else "#000000"
+
     svg_content = svg_content.replace('{{strHeaderNodesSuccess}}', str(nodes_success))
     svg_content = svg_content.replace('{{strHeaderNodesTotal}}', str(nodes_total))
+    svg_content = svg_content.replace('{{strHeaderNodesFill}}', nodes_fill)
     
     # === EARNINGS ===
     paid = round(cents_to_dollars(payout_data['currentMonth']['payout']), 2)

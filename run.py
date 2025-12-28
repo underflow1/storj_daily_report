@@ -92,7 +92,7 @@ def main():
     file_uuid = str(uuid.uuid4())
 
     template_file = getattr(config, 'TEMPLATE_PATH', 'templates/default/index.svg')
-    nodes_file = "nodes.txt"
+    nodes_file = getattr(config, 'NODES_FILE', 'nodes.txt')
     output_svg = os.path.join(temp_dir, f"{file_uuid}.svg")
     output_png = os.path.join(temp_dir, f"{file_uuid}.png")
     

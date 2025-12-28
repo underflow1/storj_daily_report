@@ -20,3 +20,11 @@ API_ROUTES = [
 # Путь к шаблону SVG
 TEMPLATE_PATH = "templates/default/index.svg"
 
+# Путь к файлу со списком нод
+# Формат: одна нода на строку, формат host:port
+# Пример:
+#   node101:11101
+#   192.168.1.100:14002
+#   [2001:db8::1]:14002
+NODES_FILE = "nodes.txt"
+
